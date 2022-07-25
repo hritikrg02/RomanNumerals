@@ -67,9 +67,20 @@ public static class RomanUtils {
         if (num > 3999) {
             throw new ArgumentException($"error: param of value {num} exceeds maximum possible roman numeral, 3999");
         }
+
+        var roman = "";
+        var numAsReverse = num.ToString().Reverse().ToArray(); // 0, 2, 3
+
+        for (var i = 0; i < numAsReverse.Length; i++) {
+            var digit = int.Parse(numAsReverse[i].ToString());
+            if (digit == 0) {
+                continue;
+            }
+
+            var romanTemp = RomanTable[i][digit] + roman;
+            roman = romanTemp;
+        }
         
-        
-        
-        return "";
+        return roman;
     }
 }
