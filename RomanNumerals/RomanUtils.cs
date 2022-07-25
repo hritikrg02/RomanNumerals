@@ -64,7 +64,7 @@ public static class RomanUtils {
 
     // TODO description
     public static string ToRoman(this int num) {
-        if (num > 3999) {
+        if (num is > 3999 or < 1) {
             throw new ArgumentException($"error: param of value {num} exceeds maximum possible roman numeral, 3999");
         }
 
