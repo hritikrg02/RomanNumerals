@@ -39,7 +39,7 @@ public static class RomanUtils {
             } },
             
             // hundreds place
-            { 1, new Dictionary<int, string>() {
+            { 2, new Dictionary<int, string>() {
                 { 0, "null" }, // should never be used
                 { 1, "C" },
                 { 2, "CC" },
@@ -53,7 +53,7 @@ public static class RomanUtils {
             } },
             
             // thousands place
-            { 1, new Dictionary<int, string>() {
+            { 3, new Dictionary<int, string>() {
                 { 0, "null" }, // should never be used
                 { 1, "M" },
                 { 2, "MM" },
@@ -64,8 +64,12 @@ public static class RomanUtils {
 
     // TODO description
     public static string ToRoman(this int num) {
-        // TODO throw error if > 3999
-        // TODO
+        if (num > 3999) {
+            throw new ArgumentException($"error: param of value {num} exceeds maximum possible roman numeral, 3999");
+        }
+        
+        
+        
         return "";
     }
 }
