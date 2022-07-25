@@ -68,10 +68,4 @@ public static class RomanUtils {
         // TODO
         return "";
     }
-    
-    // TODO delete
-    public static string RangeToRoman(int upper, int lower) {
-        // TODO
-        return "";
-    }
 }
