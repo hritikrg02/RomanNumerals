@@ -62,14 +62,21 @@ public static class RomanUtils {
         };
     }
 
-    // TODO description
+    /// <summary>
+    /// Converts a integer in the range [1, 3999] into the correct roman numeral
+    /// representation.
+    /// </summary>
+    /// <param name="num">Integer to be converted.</param>
+    /// <returns>String representation of the integer as a roman numeral.</returns>
+    /// <exception cref="ArgumentException">If integer is not within specified range.</exception>
     public static string ToRoman(this int num) {
         if (num is > 3999 or < 1) {
-            throw new ArgumentException($"error: param of value {num} exceeds maximum possible roman numeral, 3999");
+            throw new ArgumentException($"error: param of value {num} " +
+                                        $"exceeds maximum possible roman numeral, 3999");
         }
 
         var roman = "";
-        var numAsReverse = num.ToString().Reverse().ToArray(); // 0, 2, 3
+        var numAsReverse = num.ToString().Reverse().ToArray(); 
 
         for (var i = 0; i < numAsReverse.Length; i++) {
             var digit = int.Parse(numAsReverse[i].ToString());
