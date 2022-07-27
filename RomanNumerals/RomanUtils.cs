@@ -8,10 +8,10 @@ public static class RomanUtils {
     private static readonly Dictionary<int, Dictionary<int, string>> RomanTable;
 
     static RomanUtils() {
-        RomanTable = new Dictionary<int, Dictionary<int, string>>() {
+        RomanTable = new Dictionary<int, Dictionary<int, string>> {
             
             // units place
-            { 0, new Dictionary<int, string>() {
+            { 0, new Dictionary<int, string> {
                 { 0, "null" }, // should never be used
                 { 1, "I" },
                 { 2, "II" },
@@ -25,7 +25,7 @@ public static class RomanUtils {
             } },
             
             // tens place
-            { 1, new Dictionary<int, string>() {
+            { 1, new Dictionary<int, string> {
                 { 0, "null" }, // should never be used
                 { 1, "X" },
                 { 2, "XX" },
@@ -39,7 +39,7 @@ public static class RomanUtils {
             } },
             
             // hundreds place
-            { 2, new Dictionary<int, string>() {
+            { 2, new Dictionary<int, string> {
                 { 0, "null" }, // should never be used
                 { 1, "C" },
                 { 2, "CC" },
@@ -53,7 +53,7 @@ public static class RomanUtils {
             } },
             
             // thousands place
-            { 3, new Dictionary<int, string>() {
+            { 3, new Dictionary<int, string> {
                 { 0, "null" }, // should never be used
                 { 1, "M" },
                 { 2, "MM" },
